@@ -1,0 +1,147 @@
+===========================================
+NETWORK ATTACK DETECTION LAB
+CONFIGURATION COMMANDS
+===========================================
+
+
+=========================
+SWITCH CONFIGURATION
+=========================
+
+enable
+configure terminal
+
+vlan 10
+name USERS
+
+vlan 20
+name SERVERS
+
+vlan 30
+name ADMIN
+
+vlan 99
+name ATTACKER
+
+
+interface range fa0/1-2
+switchport mode access
+switchport access vlan 10
+exit
+
+interface fa0/3
+switchport mode access
+switchport access vlan 20
+exit
+
+interface fa0/4
+switchport mode access
+switchport access vlan 30
+exit
+
+interface fa0/5
+switchport mode access
+switchport access vlan 99
+exit
+
+
+interface fa0/24
+switchport mode trunk
+exit
+
+end
+write memory
+
+
+=========================
+ROUTER CONFIGURATION
+=========================
+
+enable
+configure terminal
+
+interface gig0/0
+no shutdown
+exit
+
+
+interface gig0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+exit
+
+
+interface gig0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+exit
+
+
+interface gig0/0.30
+encapsulation dot1Q 30
+ip address 192.168.30.1 255.255.255.0
+exit
+
+
+interface gig0/0.99
+encapsulation dot1Q 99
+ip address 192.168.99.1 255.255.255.0
+exit
+
+
+=========================
+ACL FIREWALL RULES
+=========================
+
+access-list 110 deny ip 192.168.99.0 0.0.0.255 192.168.20.0 0.0.0.255
+access-list 110 deny ip 192.168.99.0 0.0.0.255 192.168.30.0 0.0.0.255
+access-list 110 permit ip any any
+
+
+interface gig0/0.99
+ip access-group 110 in
+exit
+
+
+end
+write memory
+
+
+access-list 120 deny ip 192.168.10.0 0.0.0.255 192.168.30.0 0.0.0.255
+access-list 120 permit ip any any
+
+
+interface gig0/0.10
+ip access-group 120 in
+exit
+
+
+end
+write memory
+
+=========================
+VERIFICATION COMMANDS
+=========================
+
+show vlan brief
+show ip interface brief
+show access-lists
+show running-config
+
+
+=========================
+TEST COMMANDS
+=========================
+
+User PC:
+ping 192.168.20.10
+
+ping 192.168.30.10
+
+Attacker PC:
+ping 192.168.20.10
+ping 192.168.30.10
+
+
+Web Test:
+http://192.168.20.10
