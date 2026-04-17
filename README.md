@@ -1,8 +1,8 @@
-\#  Network Attack Detection Lab
+#  Network Attack Detection Lab
 
 
 
-\##  Project Overview
+##  Project Overview
 
 This project simulates a \*\*Security Operations Center (SOC) investigation workflow\*\* by building a segmented enterprise network in Cisco Packet Tracer and detecting unauthorized internal reconnaissance activity.
 
@@ -10,65 +10,65 @@ This project simulates a \*\*Security Operations Center (SOC) investigation work
 
 The lab demonstrates how network defenders can:
 
-\- Segment networks using VLANs
+- Segment networks using VLANs
 
-\- Apply firewall rules using ACLs
+- Apply firewall rules using ACLs
 
-\- Detect suspicious activity
+- Detect suspicious activity
 
-\- Analyze traffic
+- Analyze traffic
 
-\- Investigate incidents
-
-
-
-\---
+- Investigate incidents
 
 
 
-\##  Objectives
-
-\- Build a secure segmented network
-
-\- Simulate attacker behavior from a rogue workstation
-
-\- Block unauthorized access using ACLs
-
-\- Capture evidence of malicious traffic
-
-\- Document the incident 
+---
 
 
 
-\---
+##  Objectives
+
+- Build a secure segmented network
+
+- Simulate attacker behavior from a rogue workstation
+
+- Block unauthorized access using ACLs
+
+- Capture evidence of malicious traffic
+
+- Document the incident 
 
 
 
-\##  Tools Used
-
-\- Cisco Packet Tracer
-
-\- Router ACLs
-
-\- VLAN Segmentation
-
-\- Packet Capture Simulation
-
-\- Network Traffic Analysis
+---
 
 
 
+##  Tools Used
+
+- Cisco Packet Tracer
+
+- Router ACLs
+
+- VLAN Segmentation
+
+- Packet Capture Simulation
+
+- Network Traffic Analysis
 
 
-\---
 
 
 
-\##  Network Architecture
+---
 
 
 
-\### VLAN Design
+##  Network Architecture
+
+
+
+### VLAN Design
 
 
 
@@ -86,79 +86,79 @@ The lab demonstrates how network defenders can:
 
 
 
-\---
+---
 
 
 
-\##  Network Topology
+##  Network Topology
 
 
 
-!\[Topology](screenshots/01\_topology.png)
+[Topology](screenshots/01\_topology.png)
 
 
 
-\---
+---
 
 
 
-\##  Switch VLAN Configuration
+##  Switch VLAN Configuration
 
 
 
-!\[VLAN Config](screenshots/02\_vlan\_config.png)
+[VLAN Config](screenshots/02\_vlan\_config.png)
 
 
 
-\---
+---
 
 
 
-\##  Router Inter-VLAN Routing
+##  Router Inter-VLAN Routing
 
 
 
-!\[Router Config](screenshots/03\_router\_subinterfaces.png)
+[Router Config](screenshots/03\_router\_subinterfaces.png)
 
 
 
-\---
+---
 
 
 
-\##  Firewall ACL Rules
+##  Firewall ACL Rules
 
 
 
 The router was configured to:
 
-\- Block attacker VLAN from accessing server VLAN
+- Block attacker VLAN from accessing server VLAN
 
-\- Block attacker VLAN from accessing admin VLAN
+- Block attacker VLAN from accessing admin VLAN
 
-\- Permit legitimate business traffic
-
-
-
-\- Block user VLAN from accessing admin VLAN
-
-\- Permit legitimate business traffic
+- Permit legitimate business traffic
 
 
+
+- Block user VLAN from accessing admin VLAN
+
+- Permit legitimate business traffic
 
 
 
 
 
-!\[ACL Rules](screenshots/04\_acl\_rules.png)
+
+
+[ACL Rules](screenshots/04\_acl\_rules.png)
 
 
 
-\---
+---
 
 
 
-\##  Legitimate Access Test
+##  Legitimate Access Test
 
 
 
@@ -166,15 +166,15 @@ Normal users can successfully access the internal server.
 
 
 
-!\[User Access](screenshots/05\_user\_to\_server\_success.png)
+[User Access](screenshots/05\_user\_to\_server\_success.png)
 
 
 
-\---
+---
 
 
 
-\##  Attack Simulation
+##  Attack Simulation
 
 
 
@@ -182,15 +182,15 @@ The attacker workstation attempted to access protected resources and was blocked
 
 
 
-!\[Blocked Attack](screenshots/06\_kali\_blocked\_ping.png)
+[Blocked Attack](screenshots/06\_kali\_blocked\_ping.png)
 
 
 
-\---
+---
 
 
 
-\##  ACL Log Evidence
+##  ACL Log Evidence
 
 
 
@@ -198,39 +198,39 @@ Access control lists recorded denied traffic attempts.
 
 
 
-!\[ACL Logs](screenshots/07\_acl\_hit\_counter.png)
+[ACL Logs](screenshots/07\_acl\_hit\_counter.png)
 
 
 
-\---
+---
 
 
 
-\##  Packet Analysis
+##  Packet Analysis
 
 
 
 Traffic was analyzed in simulation mode to identify:
 
-\- source IP
+- source IP
 
-\- destination IP
+- destination IP
 
-\- blocked packets
-
-
+- blocked packets
 
 
 
-!\[Packet Capture](screenshots/08\_packet\_capture.png)
+
+
+[Packet Capture](screenshots/08\_packet\_capture.png)
 
 
 
-\---
+---
 
 
 
-\##  Server Access Validation
+##  Server Access Validation
 
 
 
@@ -238,73 +238,73 @@ Users could still access the internal web server.
 
 
 
-!\[Web Access](screenshots/09\_server\_http\_access.png)
+[Web Access](screenshots/09\_server\_http\_access.png)
 
 
 
-\---
+---
 
 
 
-\##  Incident Summary
+##  Incident Summary
 
 
 
-\### Threat Type
+### Threat Type
 
 Unauthorized internal reconnaissance attempt
 
 
 
-\### Source
+### Source
 
 192.168.99.10
 
 
 
-\### Target
+### Target
 
 192.168.20.10
 
 
 
-\### Detection Method
+### Detection Method
 
 ACL deny logs and packet analysis
 
 
 
-\### Response
+### Response
 
 Traffic blocked by segmentation firewall policy
 
 
 
-\---
+---
 
 
 
-\##  Security Concepts Demonstrated
+##  Security Concepts Demonstrated
 
-\- Network segmentation
+- Network segmentation
 
-\- Least privilege access
+- Least privilege access
 
-\- Internal threat detection
+- Internal threat detection
 
-\- Traffic monitoring
+- Traffic monitoring
 
-\- Incident response workflow
+- Incident response workflow
 
-\- Firewall policy enforcement
-
-
-
-\---
+- Firewall policy enforcement
 
 
 
-\##  Project Files
+---
+
+
+
+##  Project Files
 
 
 
@@ -324,57 +324,57 @@ Traffic blocked by segmentation firewall policy
 
 
 
-\---
+---
 
 
 
-\##  Key Learning Outcomes
+##  Key Learning Outcomes
 
 This lab improved my understanding of:
 
-\- Enterprise network defense
+- Enterprise network defense
 
-\- SOC investigation workflow
+- SOC investigation workflow
 
-\- Traffic analysis
+- Traffic analysis
 
-\- Threat containment
+- Threat containment
 
-\- Documentation for incident response
-
-
-
-\---
+- Documentation for incident response
 
 
 
-\##  Future Improvements
+---
+
+
+
+##  Future Improvements
 
 Possible future upgrades:
 
-\- Real Kali Linux integration
+- Real Kali Linux integration
 
-\- Wireshark live capture
+- Wireshark live capture
 
-\- Snort IDS alerts
+- Snort IDS alerts
 
-\- Wazuh SIEM integration
+- Wazuh SIEM integration
 
-\- Syslog central logging
-
-
-
-\---
+- Syslog central logging
 
 
 
-\##  Author
+---
 
-\*\*DAVID ITUNU FAJUYI\*\*  
+
+
+##  Author
+
+*\*DAVID ITUNU FAJUYI\*\*  
 
 Cybersecurity security Enthusiast
 
 
 
-\---
+---
 
