@@ -1,8 +1,8 @@
-\#  Incident Report – Unauthorized Internal Reconnaissance Attempt
+#  Incident Report – Unauthorized Internal Reconnaissance Attempt
 
 
 
-\## Incident Information
+## Incident Information
 
 
 
@@ -22,11 +22,11 @@
 
 
 
-\---
+---
 
 
 
-\##   Summary
+##   Summary
 
 
 
@@ -40,19 +40,19 @@ The firewall access control list (ACL) successfully blocked the unauthorized tra
 
 The event was detected through:
 
-\- ACL deny logs
+- ACL deny logs
 
-\- Packet capture analysis
+- Packet capture analysis
 
-\- Connectivity testing
-
-
-
-\---
+- Connectivity testing
 
 
 
-\##  Environment Details
+---
+
+
+
+##  Environment Details
 
 
 
@@ -70,11 +70,11 @@ The event was detected through:
 
 
 
-\---
+---
 
 
 
-\##  Incident Description
+##  Incident Description
 
 
 
@@ -82,11 +82,11 @@ A workstation configured as an attacker system attempted to:
 
 
 
-\- Ping the internal server
+- Ping the internal server
 
-\- Access the management network
+- Access the management network
 
-\- Enumerate accessible services
+- Enumerate accessible services
 
 
 
