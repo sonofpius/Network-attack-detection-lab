@@ -1,8 +1,8 @@
-\#  Lab Guide –  Network Attack Detection Lab
+#  Lab Guide –  Network Attack Detection Lab
 
 
 
-\##  Purpose
+##  Purpose
 
 
 
@@ -12,25 +12,25 @@ This lab demonstrates how to build a segmented network in Cisco Packet Tracer an
 
 The lab covers:
 
-\- VLAN segmentation
+- VLAN segmentation
 
-\- Inter-VLAN routing
+- Inter-VLAN routing
 
-\- ACL firewall filtering
+- ACL firewall filtering
 
-\- Attack simulation
+- Attack simulation
 
-\- Traffic analysis
+- Traffic analysis
 
-\- Incident investigation
-
-
-
-\---
+- Incident investigation
 
 
 
-\#  Step 1 – Build the Topology
+---
+
+
+
+#  Step 1 – Build the Topology
 
 
 
@@ -38,31 +38,31 @@ Add the following devices in Cisco Packet Tracer:
 
 
 
-\## Devices
+## Devices
 
-\- 1 Router (Cisco 2911)
+- 1 Router (Cisco 2911)
 
-\- 1 Switch (Cisco 2960)
+- 1 Switch (Cisco 2960)
 
-\- 2 User PCs
+- 2 User PCs
 
-\- 1 Server
+- 1 Server
 
-\- 1 Admin PC
+- 1 Admin PC
 
-\- 1 Attacker PC
-
-
+- 1 Attacker PC
 
 
 
 
 
-\---
+
+
+---
 
 
 
-\#  Step 2 – Connect Devices
+#  Step 2 – Connect Devices
 
 
 
@@ -88,11 +88,11 @@ Use \*\*Copper Straight-Through\*\* cables.
 
 
 
-\---
+---
 
 
 
-\#  Step 3  VLAN Plan
+#  Step 3  VLAN Plan
 
 
 
@@ -110,11 +110,11 @@ Use \*\*Copper Straight-Through\*\* cables.
 
 
 
-\---
+---
 
 
 
-\#  Step 4 – Configure Switch
+#  Step 4 – Configure Switch
 
 
 
@@ -132,21 +132,20 @@ configure terminal
 
 
 
-\-Create and name VLANs
+-Create and name VLANs
 
-\-Assign Ports
+-Assign Ports
 
-\-Configure Trunk to Router
+-Configure Trunk to Router
 
-\-save
-
-
-
-\---
+-save
 
 
 
-\# step 5 - Configure Router
+---
+
+
+# step 5 - Configure Router
 
 
 
@@ -164,13 +163,13 @@ configure terminal
 
 
 
-\-Enable interface
+-Enable interface
 
-\-Create Subinterfaces
+-Create Subinterfaces
 
 
 
-\---
+---
 
 
 
@@ -178,65 +177,65 @@ configure terminal
 
 
 
-\-Block attacker VLAN.
+-Block attacker VLAN.
 
-\-Apply ACl to the attacker subinterface
-
-
-
-\---
+-Apply ACl to the attacker subinterface
 
 
 
-\# step 7 - Configure End Devices
-
-\-Assign ip address, default gateway, subnetmask to all device.
+---
 
 
 
-\---
+# step 7 - Configure End Devices
+
+-Assign ip address, default gateway, subnetmask to all device.
 
 
 
-\# step 8 - Simulate Attack
+---
 
-\-On attacker PC command prompt:ping 192.168.20.10
+
+
+# step 8 - Simulate Attack
+
+-On attacker PC command prompt:ping 192.168.20.10
 
 &#x20;                              ping 192.168.30.10
 
 
 
-\---
+---
 
 
 
-\# step 9 - Validate Normal Access
+# step 9 - Validate Normal Access
 
 
 
-\-From USER PC:ping 192.168.20.10
+-From USER PC:ping 192.168.20.10
 
-\-Open browser:http://192.168.20.10
-
-
-
-\---
+-Open browser:http://192.168.20.10
 
 
 
-\# step 10 - Check Logs
+---
 
 
 
-\-On router:show access-lists
+# step 10 - Check Logs
 
 
 
-\# step 11 - Packet Analysis
+-On router:show access-lists
+
+---
+
+# step 11 - Packet Analysis
 
 
 
-\-Switch to:
+-Switch to:
 
 
 
@@ -268,15 +267,15 @@ packet destination
 
 
 
-\---
+---
 
 
 
-\# Step 12 – Capture Evidence
+# Step 12 – Capture Evidence
 
 
 
-\-take screenshots of:
+-take screenshots of:
 
 
 
