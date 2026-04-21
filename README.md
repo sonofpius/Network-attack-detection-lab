@@ -348,26 +348,6 @@ This lab improved my understanding of:
 
 
 
-##  Future Improvements
-
-Possible future upgrades:
-
-- Real Kali Linux integration
-
-- Wireshark live capture
-
-- Snort IDS alerts
-
-- Wazuh SIEM integration
-
-- Syslog central logging
-
-
-
----
-
-
-
 ##  Author
 
 *\*DAVID ITUNU FAJUYI\*\*  
