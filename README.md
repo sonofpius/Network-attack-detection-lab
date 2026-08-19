@@ -72,17 +72,12 @@ The lab demonstrates how network defenders can:
 
 
 
-| VLAN | Purpose | Network |
-
-|------|---------|---------|
-
-| 10 | Users | 192.168.10.0/24 |
-
-| 20 | Servers | 192.168.20.0/24 |
-
-| 30 | Admin | 192.168.30.0/24 |
-
-| 99 | Attacker | 192.168.99.0/24 |
+| VLAN |  Purpose |      Network    |
+|------|----------|-----------------|
+| 10   | Users    | 192.168.10.0/24 |
+| 20   | Servers  | 192.168.20.0/24 |
+| 30   | Admin    | 192.168.30.0/24 |
+| 99   | Attacker | 192.168.99.0/24 |
 
 
 
