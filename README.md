@@ -303,19 +303,13 @@ Traffic blocked by segmentation firewall policy
 
 
 
-| File | Description |
-
-|------|-------------|
-
-| `README.md` | Project overview |
-
-| `lab-guide.md` | Build instructions |
-
-| `configuration.txt` | Router \& switch commands |
-
-| `incident-report.md` | SOC analysis report |
-
-| `screenshots/` | Evidence images |
+| File                 | Description               |
+|----------------------| --------------------------|
+| `README.md`          | Project overview          |
+| `lab-guide.md`       | Build instructions        |
+| `configuration.txt`  | Router \& switch commands |
+| `incident-report.md` | SOC analysis report       |
+| `screenshots/`       | Evidence images           |
 
 
 
